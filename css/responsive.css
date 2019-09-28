@@ -8,6 +8,10 @@
 }
 
 @media only screen and (max-width: 767px) {
+  #wrap {
+    display: none;
+  }
+
   header .menu-title {
     font-size: 35px;
     top: 27%;
