@@ -80,7 +80,7 @@ header {
 /* Menu Button */
 
 .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 15;
   top: 50px;
   right: 50px;
