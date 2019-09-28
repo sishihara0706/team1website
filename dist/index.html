@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/fullpage.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <title>Team1 Website Merge</title>
+  </head>
+  <body>
+    <button id="turnOff">Turn off</button>
+    <button id="turnOn">Turn on</button>
+    <div class="contact-top"></div>
+    <a href="#section5" class="contact-btn">coutact us</a>
+    <a id="btnScrollToTop" href="#section1">
+      <i class="material-icons">arrow_upward</i>
+    </a>
+
+
+
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+      <nav class="menu">
+        <h2 class="menu-title">Menu</h2>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="#section2" class="nav-link">
+              About Us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#section3" class="nav-link">
+              Activity
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#section4" class="nav-link">
+              Members
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#section5" class="nav-link">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="wrap">
+      <div id="wrap-inner"></div>
+    </div>
+
+    <div id="fullpage">
+      <div class="section s0">
+        <div
+          id="topCarouselView"
+          class="carousel slide"
+          data-ride="carousel"
+          data-interval="4500"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#topCarouselView"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#topCarouselView" data-slide-to="1"></li>
+            <li data-target="#topCarouselView" data-slide-to="2"></li>
+            <li data-target="#topCarouselView" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div
+                class="banner"
+                style="background-image:url(image/carousel1.jpg);"
+              ></div>
+              <div class="carousel-caption d-md-block">
+                <h2
+                  class="animated bounceInRight caption-title"
+                  style="animation-delay: 1s"
+                >
+                  we are <span>beginners</span>
+                </h2>
+                <p
+                  class="animated bounceInLeft caption-desc"
+                  style="animation-delay: 1.5s"
+                >
+                  Welcome to Beginners Website.
+                </p>
+                <p
+                  class="animated bounceInRight caption-contact"
+                  style="animation-delay: 2s"
+                >
+                  <a href="#">Contact us</a>
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="banner"
+                style="background-image: url(image/carousel2.jpg);"
+              ></div>
+              <div class="carousel-caption d-md-block">
+                <h2
+                  class="animated slideInDown caption-title"
+                  style="animation-delay: 1s;"
+                >
+                  we are <span>beginners</span>
+                </h2>
+                <p
+                  class="animated fadeInUp caption-desc"
+                  style="animation-delay: 1.5s;"
+                >
+                  beginnersのウェブサイトへようこそ！
+                </p>
+                <p
+                  class="animated zoomIn caption-contact"
+                  style="animation-delay: 2s;"
+                >
+                  <a href="#">お問い合わせ</a>
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="banner"
+                style="background-image: url('image/carousel3.jpeg')"
+              ></div>
+              <div class="carousel-caption d-md-block">
+                <h2
+                  class="animated zoomIn caption-title"
+                  style="animation-delay: 1s;"
+                >
+                  we are <span>beginners</span>
+                </h2>
+                <p
+                  class="animated fadeInLeft caption-desc"
+                  style="animation-delay: 1.5s;"
+                >
+                  Welcome To Beginners Website.
+                </p>
+                <p
+                  class="animated zoomIn caption-contact"
+                  style="animation-delay: 2s;"
+                >
+                  <a href="#">Contact us</a>
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="banner"
+                style="background-image: url('image/carousel4.jpeg')"
+              ></div>
+              <div class="carousel-caption d-md-block">
+                <h2
+                  class="animated zoomInDown caption-title"
+                  style="animation-delay: 1s;"
+                >
+                  we are <span>beginners</span>
+                </h2>
+                <p
+                  class="animated slideInRight caption-desc"
+                  style="animation-delay: 1.5s;"
+                >
+                  beginnersのウェブサイトへようこそ！
+                </p>
+                <p
+                  class="animated rotateInUpLeft caption-contact"
+                  style="animation-delay: 2s;"
+                >
+                  <a href="#">お問い合わせ</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#topCarouselView"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#topCarouselView"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="section s1">
+        <h1>Beginnersとは？</h1>
+        <div class="container">
+          <div class="content content1">
+            <h2>①やる気</h2>
+            <p>
+              やる気がある方を全力でサポートできる環境となっております。
+              Slackの方に毎日活動報告をしていただきますので、強制的に勉強でき、モチベーションを保つことのできる環境に身を置くことができます。
+            </p>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section s2">
+        <!--drew 追加分start-->
+
+        <h1>活動内容</h1>
+        <div class="container">
+          <div class="content2">
+
+            <div class="activity">
+                  <h2>Slack</h2>
+                  <p　class="txt-contents">主にSlackを用いて日々の学習内容や勉強方法の共有を行なっています
+                  </p>
+
+            </div>
+            <div class="activity">
+                  <h2>もくもく会</h2>
+                  <p class="txt-contents">土日などの休日に都内のカフェにて、もくもく会を開催しています</p>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="section s3">
+        <h1 style="color: black;">運営メンバー</h1>
+        <div class="container">
+
+          <!--まじん　追加分start-->
+
+          <ul class="member">
+            <li>
+              <div style="padding:5px;margin-bottom:800px;border:2px solid #ffffff;background-color:gray;"><img src="画像入れる" width= "270px" height="300px">Kosei<br>
+                <div style="font-size: 15px;">Beginners オーナー</div>
+              </div>
+            </li>
+   
+            <li>
+              <div style="padding:5px;margin-bottom:800px;border:2px solid #ffffff;background-color:gray;"><img src="画像入れる" width= "270px" height="300px">Jack Ma<br>
+                <div style="font-size: 15px;">Beginners マネージャー</div>
+              </div>
+            </li>
+   
+            <li>
+              <div style="padding:5px;margin-bottom:800px;border:2px solid #ffffff;background-color:gray;"><img src="画像入れる" width= "270px" height="300px">Jeff bezos<br>
+                <div style="font-size: 15px;">Beginners 経理</div>
+              </div>
+            </li>
+           </ul>
+
+           <!--まじん　追加分finish-->
+
+        </div>
+      </div>
+
+      <div class="section s4">
+        <h1></h1>
+        <div class="container">
+          <div class="">
+              <h1 class="wf-sawarabigothic s4Title">お問い合わせ</h1>
+                <!-- <div class="content content4"> -->
+                  <form class="cf">
+                    <div class="half left cf">
+                      <input type="text" id="input-name" placeholder="氏名">
+                      <input type="email" id="input-email" placeholder="メールアドレス">
+                      <input type="text" id="input-subject" placeholder="件名">
+                    </div>
+                    <div class="half right cf">
+                      <textarea name="message" type="text" id="input-message" placeholder="お問い合わせ内容"></textarea>
+                    </div>  
+                    <input type="submit" value="送信" id="input-submit">
+                  </form>
+                <!-- </div> -->
+              </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

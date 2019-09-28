@@ -1,0 +1,500 @@
+body {
+  color: #ffffff;
+}
+
+#wrap {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.7); */
+  border: 1px solid #fff;
+  /* opacity: 0; */
+  /* transition: opacity 0.5s, transform 0s 0.5s; */
+  /* transform: scale(0); */
+}
+
+#wrap-inner {
+  width: 100%;
+  height: 100%;
+  border: 20px solid #fff;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 100px;
+  font-size: 4rem;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Back To Top Button Style */
+#btnScrollToTop {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ed00b2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 15;
+}
+
+#btnScrollToTop .material-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#btnScrollToTop:active {
+  background: #a7027d;
+}
+
+/* ---------------------- s0 Styles ---------------------- */
+
+/* Header Style */
+
+header {
+  position: absolute;
+  z-index: 15;
+  width: 100%;
+}
+
+/* Menu Button */
+
+.menu-btn {
+  position: absolute;
+  z-index: 15;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+
+.btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: #ffffff;
+  transition: all 0.4s ease-out;
+}
+
+.menu-btn.close-menu {
+  transform: rotate(180deg);
+}
+
+.menu-btn.close-menu .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-btn.close-menu .btn-line:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.close-menu .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Menu Overlay */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.menu-title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  letter-spacing: 2px;
+  z-index: 1;
+  font-family: serif;
+  color: #ed00b2;
+}
+
+.menu.show {
+  /* animation-name: fadeIn;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards; */
+  animation: fadeIn 0.5s ease 0s 1 normal forwards;
+}
+
+.menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.8);
+  list-style: none;
+  z-index: -1;
+}
+
+.menu-nav.show {
+  /* animation: fadeIn 0.5s ease 0s 1 normal forwards; */
+}
+
+.nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  padding: 1rem 0;
+  font-weight: 300;
+  color: #ffffff;
+  transition: all 0.3s ease-out;
+}
+
+.nav-link:hover {
+  color: #ed00b2;
+  cursor: default;
+  pointer-events: none;
+}
+
+.nav-item.show .nav-link:hover {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+a.contact-btn {
+  background-color: transparent;
+  display: none;
+  padding: 15px 35px;
+  margin-top: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 25px;
+  position: absolute;
+  top: 49.25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  color: transparent;
+  transition: "background-color" 0.3s ease-out;
+}
+
+a.contact-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.s0 .carousel-inner .carousel-item {
+  height: 100vh;
+  transition: all 1s ease;
+  position: relative;
+}
+
+.s0 .banner {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.s0 .banner::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* z-index: -1; */
+}
+
+.s0 .carousel-caption {
+  padding-bottom: 300px;
+}
+
+.s0 .carousel-caption h2 {
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.s0 .carousel-caption h2 span {
+  color: #ed00b2;
+}
+
+.s0 .caption-desc {
+  font-size: 20px;
+}
+
+.s0 .carousel-caption a {
+  background-color: #ed00b2;
+  display: inline-block;
+  padding: 15px 35px;
+  margin-top: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  border-radius: 25px;
+}
+
+.s0 .carousel-indicators .active {
+  background-color: #ed00b2;
+}
+
+.s0 .carousel-indicators {
+  margin-bottom: 2rem;
+}
+
+#fp-nav ul li a.active span {
+  background-color: #ed00b2;
+}
+#fp-nav ul li a.active + .fp-tooltip {
+  color: #ed00b2;
+}
+#fp-nav ul li a:active span {
+  background-color: #ed00b2;
+}
+
+/* .s1 Styles */
+
+/* 大迫さん追加分 */
+.s1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.s1 {
+  background-image: url("../image/Motivation-sign-with-a-beautiful-day.jpeg");
+  background-size: cover;
+  background-position: center;
+  z-index: 10;
+}
+
+/* /大迫さん追加分 */
+
+/* .s2 Styles */
+
+.s2 {
+  /* background-image: url("../image/section2.jpeg"); */
+  background-size: cover;
+  background-position: center;
+}
+
+/* drewさん追加分 */
+.content2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.activity {
+  border-width: thin;
+  border-style: solid;
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+}
+
+.activity h2 {
+  font-size: 24px;
+  font-family: sans-serif;
+  text-decoration: underline;
+}
+
+.activity p {
+  font-size: 16px;
+  font-family: serif;
+  display: inline-block;
+}
+
+/* /drewさん追加分 */
+
+/* .s3 Styles */
+
+.s3 {
+  /* background-image: url("../image/section3.jpeg"); */
+  background-size: cover;
+  background-position: center;
+}
+
+/* まじんさん追加分 */
+.member li {
+  display: inline-block;
+  width: 280px;
+  height: 260px;
+  float: left;
+  list-style: none;
+  margin-left: 60px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* /まじんさん追加分 */
+
+/* かるなさん追加部分 */
+.s4Title {
+  color: #333;
+}
+form {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto;
+}
+form input,
+form textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-family: "Merriweather", sans-serif;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  resize: none;
+}
+form input:focus,
+form textarea:focus {
+  -moz-box-shadow: 0 0px 2px #e74c3c !important;
+  -webkit-box-shadow: 0 0px 2px #e74c3c !important;
+  box-shadow: 0 0px 2px #e74c3c !important;
+}
+form #input-submit {
+  color: white;
+  background: #e74c3c;
+  cursor: pointer;
+}
+form #input-submit:hover {
+  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+form textarea {
+  height: 126px;
+}
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right {
+  width: 50%;
+}
+
+.left {
+  margin-right: 2%;
+}
+
+@media (max-width: 480px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/* /かるなさん追加部分 */
+
+.container {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content {
+  border: 1px solid #ffffff;
+  padding: 30px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  display: none;
+}
+
+#fp-nav ul li a span {
+  background-color: #ffffff;
+}
+
+#turnOff,
+#turnOn {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  font-size: 2rem;
+  cursor: pointer;
+  top: 20px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+#turnOff {
+  left: 20px;
+}
+
+#turnOn {
+  left: 240px;
+}

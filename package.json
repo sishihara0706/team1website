@@ -1,0 +1,16 @@
+{
+  "name": "team1-website-merge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://sishihara0706.github.io/team1website",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
