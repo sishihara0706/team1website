@@ -1,0 +1,40 @@
+@media only screen and (min-width: 768px) {
+  .s0 .carousel-control-next-icon {
+    background-image: none;
+  }
+  .s0 .carousel-control-prev-icon {
+    background-image: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header .menu-title {
+    font-size: 35px;
+    top: 27%;
+  }
+  header .nav-link {
+    font-size: 20px;
+    padding: 0.7rem 0;
+  }
+
+  .s0 .carousel-caption {
+    padding-bottom: 270px;
+  }
+
+  .s0 .carousel-caption .caption-title {
+    font-size: 30px;
+  }
+
+  .s0 .carousel-caption .caption-desc {
+    font-size: 18px;
+  }
+
+  .s0 .carousel-caption a {
+    padding: 10px 25px;
+  }
+
+  a.contact-btn {
+    top: 54.25%;
+    /* padding: 10px 25px; */
+  }
+}
