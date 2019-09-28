@@ -12,23 +12,26 @@ $(document).ready(function() {
     loopBottom: true,
     onLeave: function(origin, destination, direction) {
       console.log("onLeave", origin.index, destination.index);
-      if (origin.index == 1) {
+      if (origin.index == 0) {
+        $("a.contact-btn").fadeOut();
+        menuReset();
+        $("#btnScrollToTop").fadeIn();
+        $(".nav-item.active").removeClass("active");
+      } else if (origin.index == 1) {
         $(".content1").slideUp();
+        $(".nav-item.active").removeClass("active");
         // $("#btnScrollToTop").fadeIn();
       } else if (origin.index == 2) {
         $(".content2").slideUp();
+        $(".nav-item.active").removeClass("active");
       } else if (origin.index == 3) {
         $(".content3").slideUp();
+        $(".nav-item.active").removeClass("active");
       } else if (origin.index == 4) {
         $(".content4").slideUp();
+        $(".nav-item.active").removeClass("active");
         $("#wrap").show();
         // $("header").show();
-      } else if (origin.index == 0) {
-        $("a.contact-btn").fadeOut();
-        $(".menu").fadeOut();
-        $(".menu-btn").fadeOut();
-        menuReset();
-        $("#btnScrollToTop").fadeIn();
       }
 
       if (destination.index == 4) {
@@ -43,20 +46,35 @@ $(document).ready(function() {
     afterLoad: function(origin, destination, direction) {
       console.log("afterLoad", origin.index, destination.index);
       if (destination.index == 0) {
-        $(".menu").fadeIn();
-        $(".menu-btn").fadeIn();
+        // $(".menu").fadeIn();
+        // $(".menu-btn").fadeIn();
         $("#btnScrollToTop").hide();
+        $(".nav-item:nth-child(1)").addClass("active");
       } else if (destination.index == 1) {
         $(".content1").slideDown();
+        $(".nav-item:nth-child(2)").addClass("active");
       } else if (destination.index == 2) {
         $(".content2").slideDown();
+        $(".nav-item:nth-child(3)").addClass("active");
       } else if (destination.index == 3) {
         $(".content3").slideDown();
+        $(".nav-item:nth-child(4)").addClass("active");
       } else if (destination.index == 4) {
         $(".content4").slideDown();
+        $(".nav-item:nth-child(5)").addClass("active");
         // $("header").hide();
       }
     }
+  });
+
+  // リンクをクリックした時のリセット処理
+  $fpNavLink = $("#fp-nav ul li a");
+
+  $(".nav-link").click(function() {
+    menuReset();
+  });
+  $fpNavLink.click(function() {
+    menuReset();
   });
 
   setTimeout(function() {
@@ -108,6 +126,7 @@ function toggleMenu() {
     menuTitle.classList.add("show");
     navItem.forEach(item => item.classList.add("show"));
     $("a.contact-btn").hide();
+    $(".menu").fadeIn();
 
     // Set Menu State
     showMenu = true;
@@ -118,6 +137,7 @@ function toggleMenu() {
     menuTitle.classList.remove("show");
     navItem.forEach(item => item.classList.remove("show"));
     $("a.contact-btn").show();
+    $(".menu").fadeOut();
 
     // Set Menu State
     showMenu = false;
@@ -130,6 +150,7 @@ function menuReset() {
   menuNav.classList.remove("show");
   menuTitle.classList.remove("show");
   navItem.forEach(item => item.classList.remove("show"));
+  $(".menu").fadeOut();
 
   // Set Menu State
   showMenu = false;

@@ -111,7 +111,7 @@ header {
 }
 
 /* Menu Overlay */
-
+/* 
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -127,18 +127,19 @@ header {
   100% {
     opacity: 1;
   }
-}
+} */
 .menu {
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0;
-  transition: all 0.3s;
+  /* opacity: 0; */
+  display: none;
+  /* transition: all 0.3s; */
 }
 
 .menu-title {
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 50px;
@@ -156,7 +157,7 @@ header {
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: forwards; */
-  animation: fadeIn 0.5s ease 0s 1 normal forwards;
+  /* animation: fadeIn 0.5s ease 0s 1 normal forwards; */
 }
 
 .menu-nav {
@@ -188,15 +189,13 @@ header {
   transition: all 0.3s ease-out;
 }
 
-.nav-link:hover {
+.nav-item.active .nav-link {
   color: #ed00b2;
-  cursor: default;
   pointer-events: none;
 }
 
-.nav-item.show .nav-link:hover {
-  cursor: pointer;
-  pointer-events: auto;
+.nav-link:hover {
+  color: #ed00b2;
 }
 
 a.contact-btn {
