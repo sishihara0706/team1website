@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $("#fullpage").fullpage({
-    sectionsColor: ["#0f0", "#00f", "#f00", "#f0f", "#0ff"],
+    sectionsColor: ["#ccc", "#00f", "#f00", "#f0f", "#0ff"],
     autoscrolling: true,
     scrollHorizontally: true,
     navigation: true,
