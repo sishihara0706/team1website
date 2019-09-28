@@ -30,12 +30,12 @@ $(document).ready(function() {
       } else if (origin.index == 4) {
         $(".content4").slideUp();
         $(".nav-item.active").removeClass("active");
-        $("#wrap").show();
+        // $("#wrap").show();
         // $("header").show();
       }
 
       if (destination.index == 4) {
-        $("#wrap").hide();
+        // $("#wrap").hide();
       }
 
       if (destination.index == 0) {
